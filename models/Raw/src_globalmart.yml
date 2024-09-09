@@ -6,5 +6,11 @@ sources:
     schema: globalmart
     tables:
       - name: customer
+#for tesing
+        columns:
+          - name: CUSTOMER_ID
+            tests:
+              - unique
+
       - name: orders
       - name: product
