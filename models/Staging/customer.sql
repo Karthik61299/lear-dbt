@@ -1,0 +1,6 @@
+SELECT
+    CUSTOMER_ID,
+    CUSTOMER_NAME,
+    SEGMENT
+FROM
+    {{ source('GLOBALMART', 'CUSTOMER') }}

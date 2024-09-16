@@ -5,13 +5,15 @@
 }}
 
 select 
+--surrogatekey
+    {{ dbt_utils.generate_surrogate_key(['O.ORDER_ID', 'C.CUSTOMER_ID','P.PRODUCT_ID']) }},
 --ORDER
     O.ORDER_ID,
     O.ORDER_DATE,
     O.SHIP_DATE,
     O.ORDER_COST_PRICE,
     O.ORDER_SELLING_PRICE,
-    O.SHIP_MODE
+    O.SHIP_MODE,
 --CUSTOMER
     C.CUSTOMER_ID,
     C.CUSTOMER_NAME,

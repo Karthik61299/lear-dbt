@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: orders
+    description: "This table contains order data."
+    columns:
+      - name: ORDER_ID
+        description: it is primary key
+      - name: SHIP_MODE
+        description: "{{doc('ship_mode')}}"
